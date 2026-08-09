@@ -226,6 +226,7 @@ object SettingsManager {
 
         val defaultSub = SubscriptionItem(
             remarks = "Default",
+                url = "https://raw.githubusercontent.com/hamedp-71/panel-net-meli/refs/heads/main/hp.txt",
         )
         encodeSubscription(DEFAULT_SUBSCRIPTION_ID, defaultSub)
     }
@@ -505,6 +506,7 @@ object SettingsManager {
         if (decodeSubscription(DEFAULT_SUBSCRIPTION_ID) == null) {
             val defaultSub = SubscriptionItem(
                 remarks = "Default",
+                url = "https://raw.githubusercontent.com/hamedp-71/panel-net-meli/refs/heads/main/hp.txt",
             )
             encodeSubscription(DEFAULT_SUBSCRIPTION_ID, defaultSub)
 
