@@ -4,58 +4,44 @@
     android:layout_height="match_parent"
     android:background="@color/home_background">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="?attr/actionBarSize">
+        android:paddingHorizontal="@dimen/padding_spacing_dp16"
+        android:paddingBottom="88dp"
+        android:clipToPadding="false" />
 
-        <HorizontalScrollView
-            android:id="@+id/section_tabs_scroll"
-            android:background="@drawable/bg_top_bar_glass"
-            android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/empty_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/padding_spacing_dp16"
+        android:text="@string/server_list_empty"
+        android:textColor="@color/home_text_secondary"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <HorizontalScrollView
+        android:id="@+id/section_tabs_scroll"
+        android:background="@drawable/bg_top_bar_glass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/section_tabs_container"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scrollbars="none"
-            android:visibility="gone">
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/padding_spacing_dp16"
+            android:paddingVertical="@dimen/padding_spacing_dp8" />
 
-            <LinearLayout
-                android:id="@+id/section_tabs_container"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingHorizontal="@dimen/padding_spacing_dp16"
-                android:paddingVertical="@dimen/padding_spacing_dp8" />
-
-        </HorizontalScrollView>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/padding_spacing_dp16"
-                android:paddingTop="@dimen/padding_spacing_dp16"
-                android:paddingBottom="88dp"
-                android:clipToPadding="false" />
-
-            <TextView
-                android:id="@+id/empty_state"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:padding="@dimen/padding_spacing_dp16"
-                android:text="@string/server_list_empty"
-                android:textColor="@color/home_text_secondary"
-                android:textSize="14sp"
-                android:visibility="gone" />
-
-        </FrameLayout>
-
-    </LinearLayout>
+    </HorizontalScrollView>
 
     <include android:id="@+id/bottom_nav" layout="@layout/bottom_nav_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" />
 

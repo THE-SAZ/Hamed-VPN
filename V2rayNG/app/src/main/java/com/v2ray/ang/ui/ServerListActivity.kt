@@ -61,6 +61,8 @@ class ServerListActivity : BaseActivity() {
         layoutManager = LinearLayoutManager(this)
         binding.recyclerView.layoutManager = layoutManager
         binding.recyclerView.adapter = adapter
+        binding.recyclerView.clipToPadding = false
+        binding.recyclerView.setPadding(binding.recyclerView.paddingLeft, (56 * resources.displayMetrics.density).toInt(), binding.recyclerView.paddingRight, binding.recyclerView.paddingBottom)
         com.v2ray.ang.util.BottomNavHelper.setup(this, binding.bottomNav.root, R.id.nav_servers)
         swipeDetector = com.v2ray.ang.util.BottomNavHelper.createSwipeDetector(this, R.id.nav_servers)
     }
@@ -123,10 +125,12 @@ class ServerListActivity : BaseActivity() {
 
         if (headers.size < 2) {
             binding.sectionTabsScroll.isVisible = false
+            binding.recyclerView.setPadding(binding.recyclerView.paddingLeft, (56 * resources.displayMetrics.density).toInt(), binding.recyclerView.paddingRight, binding.recyclerView.paddingBottom)
             return
         }
 
         binding.sectionTabsScroll.isVisible = true
+            binding.recyclerView.setPadding(binding.recyclerView.paddingLeft, (100 * resources.displayMetrics.density).toInt(), binding.recyclerView.paddingRight, binding.recyclerView.paddingBottom)
         val density = resources.displayMetrics.density
         val chipMarginEnd = (8 * density).toInt()
         val paddingH = (14 * density).toInt()
@@ -157,6 +161,7 @@ class ServerListActivity : BaseActivity() {
             binding.emptyState.isVisible = true
             binding.recyclerView.isVisible = false
             binding.sectionTabsScroll.isVisible = false
+            binding.recyclerView.setPadding(binding.recyclerView.paddingLeft, (56 * resources.displayMetrics.density).toInt(), binding.recyclerView.paddingRight, binding.recyclerView.paddingBottom)
             return
         }
 
