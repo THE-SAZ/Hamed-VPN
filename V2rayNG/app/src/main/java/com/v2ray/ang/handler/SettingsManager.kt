@@ -219,16 +219,6 @@ object SettingsManager {
 
         removeSubscription(subid)
 
-        val subsList2 = decodeSubsList()
-        if (subsList2.isNotEmpty()) {
-            return
-        }
-
-        val defaultSub = SubscriptionItem(
-            remarks = "Default",
-                url = "https://raw.githubusercontent.com/hamedp-71/panel-net-meli/refs/heads/main/hp.txt",
-        )
-        encodeSubscription(DEFAULT_SUBSCRIPTION_ID, defaultSub)
     }
 
     
@@ -471,7 +461,6 @@ object SettingsManager {
             return
         }
 
-        ensureDefaultSubscription()
 
         val oldJson = MmkvManager.readLegacyServerList()
         if (oldJson.isNullOrBlank()) {

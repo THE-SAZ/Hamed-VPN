@@ -9,14 +9,7 @@ import com.v2ray.ang.util.LogUtil
 object AutoConnectManager {
 
     fun ensureSubscription(fetchFresh: Boolean = true): String {
-        var panelUrl = MmkvManager.decodeSettingsString(AppConfig.PREF_PANEL_URL)
-        var panelApiKey = MmkvManager.decodeSettingsString(AppConfig.PREF_PANEL_API_KEY)
-
-        // Use defaults if not configured
-        if (panelUrl.isNullOrBlank()) panelUrl = AppConfig.DEFAULT_PANEL_URL
-        if (panelApiKey.isNullOrBlank()) panelApiKey = AppConfig.DEFAULT_PANEL_API_KEY
-
-        val subUrl = "${panelUrl.trimEnd('/')}/api/subscription?key=$panelApiKey"
+        val subUrl = "https://raw.githubusercontent.com/hamedp-71/N_sub_cheker/refs/heads/patch-1/final.txt"
         LogUtil.i(AppConfig.TAG, "AutoConnectManager: Using subscription URL: $subUrl")
 
         // Find or create subscription
