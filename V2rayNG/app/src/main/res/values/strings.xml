@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">MEHMMET VPN</string>
-<<<<<<< HEAD:V2rayNG/app/src/main/res/values/strings.xml
+
     <string name="bottom_nav_home">Home</string>
     <string name="bottom_nav_servers">Servers</string>
     <string name="bottom_nav_subs">Subs</string>
     <string name="bottom_nav_assets">Assets</string>
     <string name="bottom_nav_settings">Settings</string>
-=======
->>>>>>> ca3b38a3 (Update app name to VPNN):res/values/strings.xml
-
     
     <string name="home_connect">Connect</string>
     <string name="home_connecting">Connecting…</string>
