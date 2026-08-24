@@ -115,5 +115,7 @@ Stay connected, report issues, or chat with other users:
 <p align="center">
   <sub>Made with ❤️ by the 2dust team</sub>
 </p>
+
 ---
+
 #Forked by THE SAZ 🔱
