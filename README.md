@@ -118,4 +118,4 @@ Stay connected, report issues, or chat with other users:
 
 ---
 
-#Forked by THE SAZ 🔱
+# Forked by THE SAZ 🔱
