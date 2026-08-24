@@ -7,10 +7,7 @@
   <img src="https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg?style=flat-square" alt="Telegram">
 </p>
 
-<p align="center">
-  <img src="https://www.codefactor.io/repository/github/2dust/v2rayng/badge" alt="CodeFactor">
-</p>
-
+## THIS IS A FORKED REPOSITORY
 ---
 
 # 🚀 v2rayNG | Hamed VPN | حـــامد VPN
